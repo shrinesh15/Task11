@@ -1,0 +1,95 @@
+ Task 11
+ 
+ Question 1 :
+
+1. What are the four access modifiers available in Java and what is their significance in terms of class, method, and variable accessibility?
+
+In Java, there are four access modifiers that control the visibility and accessibility of classes, methods, and variables. These access modifiers are:
+
+1.public: The public access modifier allows the class, method, or variable to be accessible from anywhere. This means that it can be accessed by other classes and packages without any restrictions.
+
+Class: A public class can be accessed from any other class or package.
+
+Method: A public method can be called from any other class or package.
+
+Variable: A public variable can be accessed and modified from any other class or package.
+
+2.private: The private access modifier restricts the visibility of the class, method, or variable to only within the same class. It is the most restrictive access modifier.
+
+Class: A private class cannot be accessed from outside the class it is defined in.
+
+Method: A private method can only be called within the same class.
+
+Variable: A private variable can only be accessed and modified within the same class.
+
+3.protected: The protected access modifier allows the class, method, or variable to be accessible within the same package and also in subclasses (even if they are in different packages).
+
+Class: Typically, classes are not declared as protected. They are usually public or package-private (default).
+
+Method: A protected method can be called within the same package and by subclasses, whether they are in the same package or a different one.
+
+Variable: A protected variable can be accessed within the same package and by subclasses, whether they are in the same package or a different one.
+
+4.default (package-private): If no access modifier is specified, the default access modifier is applied. It allows access to classes, methods, or variables within the same package but restricts access from classes in different packages.
+
+Class: A class with default access (no access modifier) can only be accessed from within the same package.
+
+Method: A method with default access can be called from within the same package but not from classes in different packages.
+
+Variable: A variable with default access can be accessed within the same package but not from classes in different packages.
+
+
+Question 2 :
+
+2. What is the difference between Exception and error?
+
+The difference between Exception and error are:
+
+Exception:
+
+Exceptions are objects that represent abnormal conditions or unexpected events that can occur during the execution of a program.
+
+Exceptions are typically caused by the application's code and can be caught and handled programmatically.
+
+Exceptions are meant to be recoverable, which means that the program can take corrective actions to handle or recover from them.
+
+Examples of exceptions include NullPointerException, ArrayIndexOutOfBoundsException, and FileNotFoundException.
+
+Developers are encouraged to handle exceptions using try-catch blocks or declare them in method signatures using the throws clause.
+
+Error:
+
+Errors are also objects that represent abnormal conditions, but they typically indicate serious problems that are beyond the control of the application.
+
+Errors are often caused by the environment or the Java Virtual Machine (JVM) itself and are not meant to be caught or handled by the application code.
+
+Errors are typically unrecoverable, and attempting to recover from them may lead to unpredictable behavior.
+
+Examples of errors include OutOfMemoryError, StackOverflowError, and NoClassDefFoundError.
+
+Developers are not encouraged to catch or handle errors because they indicate a severe issue that should be addressed at the system or environment level.
+
+
+3. What is the difference between checked Exception and unchecked Exception?
+
+The difference between checked Exception and unchecked Exception are :
+
+Checked Exceptions:
+
+Checked exceptions are exceptions that the Java compiler requires you to handle or declare. This means that if a method can potentially throw a checked exception, you must either catch and handle it using a try-catch block or declare the exception using the throws keyword in the method signature.
+
+Checked exceptions typically represent situations that are external to the program, such as file I/O issues, network problems, or database connection errors.
+
+Examples of checked exceptions include IOException, SQLException, and ClassNotFoundException.
+
+Checked exceptions extend the Exception class or one of its subclasses (except for RuntimeException).
+
+Unchecked Exceptions (Runtime Exceptions):
+
+Unchecked exceptions, also known as runtime exceptions, are exceptions that the compiler does not require you to catch or declare. They can be thrown and propagated through the program without the need for explicit handling.
+
+Unchecked exceptions typically represent programming errors, logical errors, or unexpected situations that should ideally be prevented during coding and testing.
+
+Examples of unchecked exceptions include NullPointerException, ArrayIndexOutOfBoundsException, and ArithmeticException.
+
+Unchecked exceptions extend the RuntimeException class or one of its subclasses.
